@@ -51,7 +51,10 @@ function App() {
   ];
   return (
     <div>
+      <div className='control-panel-container'>
       <h1>Task Manager</h1>
+      <button className='btn-create-task'>Create Task</button>
+      </div>
       <div className="app-container">
         <TaskContainer data ={data}/> 
       </div>
