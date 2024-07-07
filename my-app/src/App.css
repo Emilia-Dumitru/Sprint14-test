@@ -5,22 +5,10 @@
   justify-content: center;
   align-items: center;
 }
-.btn-create-task{
-  background-color: #3754db;
-  border-radius: 12px;
-  cursor: pointer;
-  text-align: center;
-  width: 200px;
-  font-weight: 700;
-  font-size: 16px;
-  line-height: 19px;
-  color: white;
-  border: none;
-  font-family: "Sen", sans-serif;
-  white-space: nowrap;
-}
-.control-panel-container{
+
+.control-panel-container {
   display: flex;
   justify-content: space-between;
-  padding: 20px  40px;
+  padding: 20px 40px;
+  align-items: center;
 }

@@ -1,6 +1,7 @@
 import React from 'react';
 import './App.css';
 import TaskContainer from './components/task-container/TaskContainer';
+import CreateTaskButton from './components/task-form/ButtonCreateTask';
 
 function App() {
 
@@ -53,7 +54,7 @@ function App() {
     <div>
       <div className='control-panel-container'>
       <h1>Task Manager</h1>
-      <button className='btn-create-task'>Create Task</button>
+      <CreateTaskButton/>
       </div>
       <div className="app-container">
         <TaskContainer data ={data}/> 

@@ -1,0 +1,21 @@
+
+.btn-app {
+    text-align: center;
+    padding: 20px;
+}
+
+.open-form-button {
+    background-color: #3754db;
+    border-radius: 12px;
+    cursor: pointer;
+    text-align: center;
+    width: 200px;
+    height: 80px;
+    font-weight: 700;
+    font-size: 16px;
+    line-height: 19px;
+    color: white;
+    border: none;
+    font-family: "Sen", sans-serif;
+    white-space: nowrap;
+}
