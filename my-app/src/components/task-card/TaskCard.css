@@ -55,3 +55,14 @@
     justify-content: flex-end;
     align-items: center;
 }
+.card-wrapper.focused{
+    border-color: red;
+    border-style: solid;
+}
+.delete-button{
+    cursor: pointer;
+}
+.card-wrapper.unfocused{
+    border-color: green;
+    border-style: solid;
+}
