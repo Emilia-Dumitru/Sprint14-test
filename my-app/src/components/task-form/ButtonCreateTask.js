@@ -16,11 +16,11 @@ const CreateTaskButton = ({ addTask }) => {
 
     return (
         <div className="btn-app">
-        <button className="open-form-button" onClick={handleButtonClick}>
-            Create Task
-        </button>
-        {showForm && <CreateTaskForm addTask={addTask} closeForm={closeForm} />}
-    </div>
+            <button className="open-form-button" onClick={handleButtonClick}>
+                Create Task
+            </button>
+            {showForm && <CreateTaskForm addTask={addTask} closeForm={closeForm} />}
+        </div>
     );
 }
 

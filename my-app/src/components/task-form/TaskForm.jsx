@@ -18,7 +18,7 @@ const CreateTaskForm = ({ addTask, closeForm }) => {
         addTask(newTask);
         closeForm();
     };
-    
+
     return (
         <div className="modal">
             <div className="modal-content">
@@ -27,35 +27,35 @@ const CreateTaskForm = ({ addTask, closeForm }) => {
                 <form onSubmit={handleSubmit}>
                     <div className="form-row">
                         <label className="label-md">Task Name</label>
-                        <input 
-                            className="input-primary" 
-                            type="text" 
-                            required 
-                            value={taskName} 
-                            onChange={(e) => setTaskName(e.target.value)} 
+                        <input
+                            className="input-primary"
+                            type="text"
+                            required
+                            value={taskName}
+                            onChange={(e) => setTaskName(e.target.value)}
                         />
                         <span className="error-message">This field is Required!</span>
                     </div>
                     <div className="form-row">
                         <label className="label-md">Due Date</label>
-                        <input 
-                            className="input-primary" 
-                            type="date" 
-                            required 
-                            value={dueDate} 
-                            onChange={(e) => setDueDate(e.target.value)} 
+                        <input
+                            className="input-primary"
+                            type="date"
+                            required
+                            value={dueDate}
+                            onChange={(e) => setDueDate(e.target.value)}
                         />
                         <span className="error-message">This field is Required!</span>
                     </div>
                     <div className="form-row">
                         <label className="label-md">Task Details</label>
-                        <textarea 
-                            className="input-primary" 
-                            cols={30} 
-                            rows={10} 
-                            required 
-                            value={taskDetails} 
-                            onChange={(e) => setTaskDetails(e.target.value)} 
+                        <textarea
+                            className="input-primary"
+                            cols={30}
+                            rows={10}
+                            required
+                            value={taskDetails}
+                            onChange={(e) => setTaskDetails(e.target.value)}
                         ></textarea>
                         <span className="error-message">This field is Required!</span>
                     </div>
