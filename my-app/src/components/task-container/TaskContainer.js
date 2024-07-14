@@ -4,7 +4,6 @@ import React, { useState } from "react";
 import TaskFilter from "../task-filter/TaskFilter.jsx";
 import EmptyListMessage from "../empty-list/EmptyListMessage.jsx";
 
-
 function TaskContainer({ data, deleteTask, markAsFocus, markAsUnfocus }) {
     const [focusTaskId, setFocusTaskId] = useState(null);
     const [selectedFilter, setSelectedFilter] = useState('All Tasks');
@@ -60,6 +59,5 @@ function TaskContainer({ data, deleteTask, markAsFocus, markAsUnfocus }) {
         </div>
     );
 }
-
 
 export default TaskContainer;

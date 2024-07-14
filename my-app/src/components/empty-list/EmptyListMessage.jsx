@@ -2,7 +2,7 @@ import React from "react";
 import tasksIcon from "../../assets/tasks-icon.png";
 import "./EmptyListMessage.css";
 
-const EmptyListMessage = (props) => {
+const EmptyListMessage = () => {
     return (
         <div className="empty-list-container">
             <div className="empty-list-message">
