@@ -9,7 +9,7 @@ const CreateTaskForm = ({ addTask, closeForm }) => {
     const handleSubmit = (event) => {
         event.preventDefault();
         const newTask = {
-            id: `T-${Date.now()}`,
+            
             name: taskName,
             dueDate: new Date(dueDate),
             details: taskDetails,

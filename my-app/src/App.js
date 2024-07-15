@@ -9,6 +9,7 @@ function App() {
   const [tasks, setTasks] = useState(initialData);
 
   const addTask = (newTask) => {
+    newTask.id= "T-"+ (tasks.length +1) ;
     setTasks([...tasks, { ...newTask, isFocused: false }]);
   };
 
