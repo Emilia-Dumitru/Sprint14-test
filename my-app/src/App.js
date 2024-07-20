@@ -1,61 +1,46 @@
-import React from 'react';
+import React, { useState } from 'react';
 import './App.css';
 import TaskContainer from './components/task-container/TaskContainer';
+import CreateTaskButton from './components/task-form/ButtonCreateTask';
+import TaskData from './components/task-data/TaskData';
 
 function App() {
+  const initialData = TaskData().map(task => ({ ...task, isFocused: false }));
+  const [tasks, setTasks] = useState(initialData);
 
-  const data = [
-    {
-      id: "T-1",
-      name: "Create a Design System for Enum Workspace.",
-      status: "Todo",
-      dueDate: new Date(2024, 5, 23),
-    },
-    {
-      id: "T-2",
-      name: "12 Create a Design System for Enum Workspace.",
-      status: "In Progress",
-      dueDate: new Date(2024, 7, 24),
-    },
-    {
-      id: "T-3",
-      name: "13 Create a Design System for Enum Workspace.",
-      status: "Completed",
-      dueDate: new Date(2024, 6, 13),
-    },
-    {
-      id: "T-4",
-      name: "14 Create a Design System for Enum Workspace.",
-      status: "Todo",
-      dueDate: new Date(2024, 5, 23),
-    },
-    {
-      id: "T-5",
-      name: "15 Create a Design System for Enum Workspace.",
-      status: "Completed",
-      dueDate: new Date(2024, 6, 13),
-    },
-    {
-      id: "T-6",
-      name: "Create a Design System for Enum Workspace.",
-      status: "Pending",
-      dueDate: new Date(2024, 5, 23),
-    },
-    {
-      id: "T-7",
-      name: "16 Create a Design System for Enum Workspace.",
-      status: "Todo",
-      dueDate: new Date(2024, 5, 23),
-    },
-    
-  ];
+  const addTask = (newTask) => {
+    newTask.id= "T-"+ (tasks.length +1) ;
+    setTasks([...tasks, { ...newTask, isFocused: false }]);
+  };
+
+  const deleteTask = (id) => {
+    setTasks(tasks.filter(task => task.id !== id));
+  };
+
+  const markAsFocus = (id) => {
+    setTasks(tasks.map(task => task.id === id ? { ...task, isFocused: true } : { ...task, isFocused: false }));
+  };
+
+  const markAsUnfocus = (id) => {
+    setTasks(tasks.map(task => task.id === id ? { ...task, isFocused: false } : task));
+  };
+
   return (
-    <div>
-      <h1>Task Manager</h1>
+    <div className='task-manager-container'>
+      <div className='control-panel-container'>
+        <h1>Task Manager</h1>
+        <CreateTaskButton addTask={addTask} />
+      </div>
       <div className="app-container">
-        <TaskContainer data ={data}/> 
+        <TaskContainer
+          data={tasks}
+          deleteTask={deleteTask}
+          markAsFocus={markAsFocus}
+          markAsUnfocus={markAsUnfocus}
+        />
       </div>
     </div>
   );
 }
+
 export default App;

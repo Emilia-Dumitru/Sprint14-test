@@ -55,3 +55,27 @@
     justify-content: flex-end;
     align-items: center;
 }
+
+.card-wrapper.focused {
+    border-color: red;
+    border-style: solid;
+}
+
+.delete-button {
+    padding: 5px 10px;
+    cursor: pointer;
+    font-size: 14px;
+    color: #fff;
+    background-color: #e53935;
+    border: none;
+    border-radius: 10px;
+}
+
+.delete-button:hover {
+    background-color: #c62828;
+}
+
+.card-wrapper.unfocused {
+    border-color: green;
+    border-style: solid;
+}

@@ -2,6 +2,20 @@
   background-color: #f3f3fb;
   min-height: 100vh;
   display: flex;
+  padding: 10px;
+  border-radius: 20px;
   justify-content: center;
   align-items: center;
+  margin: 30px;
+}
+
+.control-panel-container {
+  display: flex;
+  justify-content: space-between;
+  padding: 20px 40px;
+  align-items: center;
+}
+
+.task-manager-container {
+  background-color: white;
 }

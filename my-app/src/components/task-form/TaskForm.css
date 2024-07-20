@@ -1,0 +1,112 @@
+.form-row {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    margin: 20px 0;
+    margin-bottom: 15px;
+}
+
+input,
+textarea {
+    outline: none;
+}
+
+.label-md {
+    font-style: normal;
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 19px;
+    color: #2c2e3a;
+}
+
+.input-primary {
+    margin: 5px 0;
+    padding: 16px;
+    gap: 10px;
+    border: 1px solid #a8abbd;
+    border-radius: 12px;
+    font-size: 16px;
+    font-family: "Sen", sans-serif;
+}
+
+.button-primary {
+    background: #3754db;
+    border-radius: 12px;
+    padding: 19px 74px;
+    font-weight: 700;
+    font-size: 16px;
+    line-height: 19px;
+    color: white;
+    border: none;
+    cursor: pointer;
+    font-family: "Sen", sans-serif;
+    white-space: nowrap;
+}
+
+.modal {
+    position: fixed;
+    z-index: 1;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    overflow: auto;
+    background-color: rgb(0, 0, 0);
+    background-color: rgba(0, 0, 0, 0.4);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.modal-content {
+    background-color: #fefefe;
+    margin: auto;
+    padding: 20px;
+    border: 1px solid #888;
+    width: 80%;
+    max-width: 500px;
+    border-radius: 10px;
+    position: relative;
+}
+
+.close-button {
+    color: #aaa;
+    float: right;
+    font-size: 28px;
+    font-weight: bold;
+}
+
+.close-button:hover,
+.close-button:focus {
+    color: black;
+    text-decoration: none;
+    cursor: pointer;
+}
+
+.label-md {
+    display: block;
+    margin-bottom: 5px;
+}
+
+.input-primary,
+.textarea-primary {
+    padding: 10px;
+    margin-bottom: 5px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+}
+
+.error-message {
+    color: red;
+    font-size: 12px;
+    display: none;
+}
+
+.input-primary:invalid+.error-message,
+.textarea-primary:invalid+.error-message {
+    display: block;
+}
+
+.button-primary:hover {
+    background-color: #45a049;
+}
